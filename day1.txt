@@ -1,0 +1,528 @@
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "my first commit"
+[master (root-commit) 3ffb0a5] my first commit
+ 2 files changed, 24 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 news.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git checkout about.html
+Updated 1 path from the index
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git checkout -f
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git checkout -f
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log
+commit 3ffb0a59fd13116737461cafb5ac32dcf414f1cc (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 11:16:23 2022 +0530
+
+    my first commit
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log -p -1
+commit 3ffb0a59fd13116737461cafb5ac32dcf414f1cc (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 11:16:23 2022 +0530
+
+    my first commit
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..177840a
+--- /dev/null
++++ b/about.html
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>about page</title>
++</head>
++<body>
++    this is about page
++</body>
++</html>
+\ No newline at end of file
+diff --git a/news.html b/news.html
+new file mode 100644
+index 0000000..af24125
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ touch contact.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m
+error: switch `m' requires a value
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   news.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        new file:   contact.html
+        modified:   news.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "adding new features"
+[master 72e6fb1] adding new features
+ 3 files changed, 15 insertions(+)
+ create mode 100644 contact.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -a -m "skipped stage area"
+On branch master
+nothing to commit, working tree clean
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -a -m "skipped stage area"
+[master 5337d89] skipped stage area
+ 3 files changed, 3 insertions(+)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log
+commit 5337d89c4691b0a100e8e37df7abd80cad8b7b12 (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 11:50:07 2022 +0530
+
+    skipped stage area
+
+commit 72e6fb1994bfdb43d04277c264688e93e027bc57
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 11:47:24 2022 +0530
+
+    adding new features
+
+commit 3ffb0a59fd13116737461cafb5ac32dcf414f1cc
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 11:16:23 2022 +0530
+
+    my first commit
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ ls
+about.html  contact.html  news.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ pwd
+/e/Desktop/CFG-JFS
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git -rm cached
+unknown option: -rm
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git -rm cached news.html
+unknown option: -rm
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git rm --cached news.html
+rm 'news.html'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    news.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        news.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git touch delete.html
+git: 'touch' is not a git command. See 'git --help'.
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ touch delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        delete.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   delete.html
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git rm --cached delete.html
+rm 'delete.html'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        delete.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -a
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        delete.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "this is waste file"
+[master 963eba1] this is waste file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log -p -1
+commit 963eba1971add4a0e01938f931d6f8efd0dd8e09 (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:35:41 2022 +0530
+
+    this is waste file
+
+diff --git a/delete.html b/delete.html
+new file mode 100644
+index 0000000..e69de29
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log -p -1
+commit 963eba1971add4a0e01938f931d6f8efd0dd8e09 (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:35:41 2022 +0530
+
+    this is waste file
+
+diff --git a/delete.html b/delete.html
+new file mode 100644
+index 0000000..e69de29
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   delete.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "this is waste file"
+[master 218fa2a] this is waste file
+ 1 file changed, 13 insertions(+)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log -p -1
+commit 218fa2a62415f764a959d63dfec5484c809460d1 (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:38:15 2022 +0530
+
+    this is waste file
+
+diff --git a/delete.html b/delete.html
+index e69de29..c8c894c 100644
+--- a/delete.html
++++ b/delete.html
+@@ -0,0 +1,13 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=
++    , initial-scale=1.0">
++    <title><delete class="html"></delete></title>
++</head>
++<body>
++    <h1>this is a waste file</h1>
++</body>
++</html>
+\ No newline at end of file
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git rm --cached delete.html
+rm 'delete.html'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "deleted the waste file"
+[master 62190c2] deleted the waste file
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git log -p -1
+commit 62190c2359274afcde410cc536b5b82739691425 (HEAD -> master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:40:44 2022 +0530
+
+    deleted the waste file
+
+diff --git a/delete.html b/delete.html
+deleted file mode 100644
+index c8c894c..0000000
+--- a/delete.html
++++ /dev/null
+@@ -1,13 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <meta name="viewport" content="width=
+-    , initial-scale=1.0">
+-    <title><delete class="html"></delete></title>
+-</head>
+-<body>
+-    <h1>this is a waste file</h1>
+-</body>
+-</html>
+\ No newline at end of file
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        delete.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status -s
+ M contact.html
+?? delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status -s
+M  contact.html
+A  delete.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git commit -m "neww files"
+[master 4552f0d] neww files
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 gitignore
+ create mode 100644 mylogs.log
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git branch
+* master
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git branch updatecode
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git branch
+* master
+  updatecode
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git checkout updatecode
+Switched to branch 'updatecode'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git status
+On branch updatecode
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        comment.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git add -A
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git commit -a -m "this is updated files"
+[updatecode 6a1e3b8] this is updated files
+ 2 files changed, 15 insertions(+)
+ create mode 100644 comment.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git status
+On branch updatecode
+nothing to commit, working tree clean
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git checkout master
+Switched to branch 'master'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git checkout updatecode
+Switched to branch 'updatecode'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git log
+commit 6a1e3b8c0d47297587172272ea94f5d22f3bde7a (HEAD -> updatecode)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 18:12:50 2022 +0530
+
+    this is updated files
+
+commit 4552f0d8f2fdeeac0f6a84b3460bd9b4519a2a34 (master)
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 18:02:57 2022 +0530
+
+    neww files
+
+commit 62190c2359274afcde410cc536b5b82739691425
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:40:44 2022 +0530
+
+    deleted the waste file
+
+commit 218fa2a62415f764a959d63dfec5484c809460d1
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:38:15 2022 +0530
+
+    this is waste file
+
+commit 963eba1971add4a0e01938f931d6f8efd0dd8e09
+Author: Shamita <shamitanm@gmail.com>
+Date:   Wed Jan 19 17:35:41 2022 +0530
+
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (updatecode)
+$ git checkout master
+Switched to branch 'master'
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ git merge updatecode
+Updating 4552f0d..6a1e3b8
+Fast-forward
+ about.html   |  1 +
+ comment.html | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+)
+ create mode 100644 comment.html
+
+Shamita.NM@LAPTOP-ND5E280R MINGW64 /e/Desktop/CFG-JFS (master)
+$ code .
